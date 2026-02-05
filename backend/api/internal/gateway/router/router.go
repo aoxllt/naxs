@@ -70,9 +70,9 @@ func (r *Router) Register() error {
 		authGroup := apiv1.Group("/auth")
 		authGroup.Use(middleware.JWTAuth())
 		{
-			authGroup.POST("/refresh", auth.RefreshController)
 			authGroup.GET("/profiles/avatar", profiles.GetAvtarUrlController)
 		}
+		apiv1.POST("/auth/refresh", auth.RefreshController)
 
 	}
 	return nil

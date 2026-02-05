@@ -132,7 +132,7 @@ export const startTokenRefresh = () => {
         }
       }
     },
-    0.2 *60 * 1000,
+    10 *60 * 1000,
   ); // 10分钟
 };
 

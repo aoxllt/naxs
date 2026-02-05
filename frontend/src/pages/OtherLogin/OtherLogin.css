@@ -1,0 +1,98 @@
+.oauth-callback-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 16px;
+}
+
+.oauth-callback-loading p {
+  color: #666;
+  font-size: 16px;
+}
+
+.oauth-callback-setup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.setup-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.oauth-user-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.oauth-user-detail h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.oauth-user-detail p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.setup-card h2 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.setup-hint {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.bind-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bind-options .ant-btn {
+  height: 48px;
+  font-size: 16px;
+}
+
+.setup-card .form-area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.setup-card .form-area input {
+  height: 44px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.action-buttons .ant-btn-primary {
+  flex: 1;
+}

@@ -1,0 +1,100 @@
+.RegisterCard {
+  width: 440px;
+  height: 560px;
+  padding: 36px 36px 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* 标题 */
+.RegisterCard h2 {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1677ff;
+}
+
+/* 表单 */
+.form-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.RegisterCard .ant-input-affix-wrapper-focused {
+  border-color: #1677ff;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.15);
+}
+
+.action-area {
+  margin-top: 30px;
+}
+
+/* 按钮 */
+.RegisterCard .rbutton {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #1677ff, #40a9ff);
+  border: none;
+}
+
+.RegisterCard .ant-btn-primary:hover {
+  background: linear-gradient(135deg, #1668dc, #69b1ff);
+}
+
+/* ===== 登录入口 ===== */
+.login {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #8c8c8c;
+}
+
+/* 文本整体 */
+.login p {
+  margin: 0;
+}
+
+/* “登录”按钮感 */
+.login span {
+  margin-left: 4px;
+  color: #1677ff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.login span:hover {
+  color: #4096ff;
+  text-decoration: underline;
+}
+
+/* active 点击反馈 */
+.login span:active {
+  color: #0958d9;
+}
+
+/* 输入框前缀图标 */
+.prefix-icon {
+  color: rgb(7, 170, 224);
+}
+
+/* 验证码输入区域 */
+.captcha-group .captcha-input {
+  width: calc(100% - 120px);
+}
+
+.captcha-group .captcha-button {
+  width: 120px;
+  height: 35px;
+}
+

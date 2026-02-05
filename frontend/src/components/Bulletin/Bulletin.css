@@ -1,0 +1,88 @@
+.notice {
+  position: relative; /* 为右下角查看更多提供定位基准 */
+  background: #fff;
+  height: 560px;
+  border-radius: 12px;
+  padding: 20px 18px 44px; /* 给底部留出空间 */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== 公告列表 ===== */
+.notice-item {
+  font-size: 15px;
+  padding: 12px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 1.5;
+}
+
+.notice-item:hover {
+  color: #1677ff;
+}
+
+/* ===== 详情返回 ===== */
+.notice-back {
+  font-size: 14px;
+  color: #1677ff;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+
+/* ===== 详情标题 ===== */
+.notice-detail-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ===== 时间 ===== */
+.notice-detail-time {
+  font-size: 13px;
+  color: #8c8c8c;
+  margin: 10px 0 18px;
+}
+
+/* ===== 正文 ===== */
+.notice-detail-content {
+  font-size: 15.5px;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* ===== 右下角查看更多 ===== */
+.notice-more {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  font-size: 14px;
+  color: #8c8c8c;
+  cursor: pointer;
+}
+
+.notice-more:hover {
+  color: #1677ff;
+}
+
+/* ===== Bulletin 标题 ===== */
+.bulletin h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1677ff;
+}
+
+/* ===== Bulletin 列表项 ===== */
+.bulletin-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.bulletin-item:last-child {
+  border-bottom: none;
+}
+
+.bulletin-item:hover {
+  color: #1677ff;
+}

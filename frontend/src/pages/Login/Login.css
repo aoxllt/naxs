@@ -1,0 +1,83 @@
+/* 整个页面 */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #eef6ff, #f7fbff);
+}
+
+/* Header */
+.nav {
+  height: 64px;
+  flex-shrink: 0;
+}
+
+/* 左右分栏容器 */
+.mainsection {
+  flex: 1;
+  display: flex;
+  flex-direction: row;   /* 强制左右 */
+  align-items: stretch;
+  padding: 32px 48px;
+  gap: 32px;
+}
+
+/* 左侧公告 */
+.bulletin {
+  flex: 8;
+  min-width: 260px;
+}
+
+/* 右侧登录 */
+.login-card {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= 移动端适配 ================= */
+@media (max-width: 768px) {
+  /* 页面整体 */
+  .login-page {
+    min-height: 100vh;
+  }
+
+  /* 主体改为上下布局 */
+  .mainsection {
+    flex-direction: column;
+    padding: 16px;
+    gap: 20px;
+  }
+
+  /* 登录卡片放上面 */
+  .login-card {
+    order: 1;
+    justify-content: center;
+  }
+
+  /* 公告放下面 */
+  .bulletin {
+    order: 2;
+    flex: none;
+    min-width: unset;
+  }
+
+  /* 公告高度控制，避免撑爆 */
+  .bulletin .notice {
+    height: auto;
+    max-height: 360px;
+    overflow-y: auto;
+  }
+}

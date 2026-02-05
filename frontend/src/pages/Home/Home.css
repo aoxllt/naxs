@@ -1,0 +1,658 @@
+/*
+ * @Author: xel
+ * @Date: 2026-02-05 10:52:00
+ * @LastEditors: xel
+ * @LastEditTime: 2026-02-05 11:21:12
+ * @FilePath: \frontend\src\pages\Home\Home.css
+ * @Description: 
+ */
+.home-container {
+  min-height: 100vh;
+  background-color: #f0ebe5;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-content {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.home-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.home-row {
+  display: flex;
+  gap: 20px;
+}
+
+.home-row:last-child {
+  flex: 1;
+}
+
+/* 右侧竖向大卡片 */
+.right-card {
+  width: 350px;
+  min-width: 350px;
+}
+
+.home-card {
+  background-color: #faf8f5;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.home-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 打卡卡片 */
+.checkin-card {
+  width: 180px;
+  height: 120px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.checkin-card::before {
+  content: "🔥";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 32px;
+  opacity: 0.3;
+}
+
+.checkin-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px;
+}
+
+.checkin-days {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.days-unit {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.checkin-streak {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 8px;
+}
+
+/* 右上卡片 - 每日一句 */
+.top-right-card {
+  flex: 1;
+  min-height: 120px;
+  padding: 24px;
+}
+
+.daily-quote-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.daily-quote-card::before {
+  content: '"';
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.quote-label {
+  font-size: 13px;
+  color: #c17a50;
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.quote-text {
+  font-size: 17px;
+  color: #5a3e2b;
+  line-height: 1.8;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-author {
+  font-size: 14px;
+  color: #8b6914;
+  text-align: right;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+/* 中间卡片 - 计划列表 */
+.middle-card {
+  flex: 1;
+  padding: 24px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, #e0e0e0, transparent);
+  margin-left: 10px;
+}
+
+.plan-list-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-list {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 280px;
+}
+
+.plan-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.plan-list::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.plan-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid transparent;
+}
+
+.plan-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-color: #f5a623;
+}
+
+.plan-item.completed {
+  background: linear-gradient(145deg, #f0fff0, #e8f5e9);
+  border-color: #52c41a;
+}
+
+.plan-item.completed .plan-title {
+  text-decoration: line-through;
+  color: #52c41a;
+}
+
+.plan-color-bar {
+  width: 4px;
+  height: 28px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.plan-item:hover .plan-color-bar {
+  height: 32px;
+}
+
+.plan-title {
+  flex: 1;
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.plan-tip {
+  font-size: 12px;
+  color: #bbb;
+  text-align: center;
+  margin-top: 15px;
+  padding: 8px;
+  background: #f9f9f9;
+  border-radius: 20px;
+}
+
+/* 底部卡片 - 每日感想 */
+.daily-thought-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #faf8f5 0%, #f5f0eb 100%);
+}
+
+.thought-textarea {
+  margin-bottom: 20px;
+  border: 2px solid #eee !important;
+  background-color: #fff !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  font-size: 15px !important;
+  transition: all 0.3s !important;
+}
+
+.thought-textarea:focus {
+  border-color: #f5a623 !important;
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.1) !important;
+}
+
+.upload-section {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.upload-section .ant-btn {
+  border-radius: 20px;
+  padding: 4px 16px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s;
+}
+
+.upload-section .ant-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 右侧 AI 卡片 */
+.ai-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #faf8f5 0%, #f0f4ff 100%);
+  border: 1px solid rgba(24, 144, 255, 0.1);
+}
+
+.ai-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.ai-icon {
+  font-size: 28px;
+  color: #1890ff;
+  background: linear-gradient(135deg, #1890ff 0%, #722ed1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.ai-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  padding: 12px;
+  background: rgba(24, 144, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid #1890ff;
+}
+
+.ai-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ai-input-section .ant-input {
+  border-radius: 12px !important;
+  border: 2px solid #e8e8e8 !important;
+  transition: all 0.3s !important;
+}
+
+.ai-input-section .ant-input:focus {
+  border-color: #1890ff !important;
+  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1) !important;
+}
+
+.generate-btn {
+  align-self: flex-end;
+  border-radius: 20px !important;
+  padding: 0 24px !important;
+  height: 40px !important;
+  font-weight: 500 !important;
+  background: linear-gradient(135deg, #1890ff 0%, #722ed1 100%) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(24, 144, 255, 0.3) !important;
+  transition: all 0.3s !important;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(24, 144, 255, 0.4) !important;
+}
+
+.ai-suggestions {
+  margin-top: 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.ai-suggestions::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ai-suggestions::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.suggestions-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.suggestions-title::before {
+  content: "✨";
+}
+
+.suggestion-item {
+  background: linear-gradient(145deg, #ffffff, #f8faff);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  border: 1px solid #e8f0fe;
+  transition: all 0.3s;
+}
+
+.suggestion-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(24, 144, 255, 0.1);
+  border-color: #1890ff;
+}
+
+.suggestion-text {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 14px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.suggestion-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.suggestion-actions .ant-btn {
+  border-radius: 16px;
+  font-size: 13px;
+}
+
+.suggestion-actions .ant-btn-primary {
+  background: linear-gradient(135deg, #52c41a 0%, #389e0d 100%);
+  border: none;
+}
+
+.suggestion-actions .ant-btn-default {
+  border-color: #ff4d4f;
+  color: #ff4d4f;
+}
+
+.suggestion-actions .ant-btn-default:hover {
+  background: #fff1f0;
+}
+
+/* 日历卡片 */
+.calendar-card {
+  width: fit-content;
+  padding: 20px;
+}
+
+.calendar-with-tasks {
+  display: flex;
+  gap: 20px;
+}
+
+.task-indicators {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 40px;
+}
+
+.task-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.task-bar {
+  width: 30px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.calendar-wrapper {
+  width: 300px;
+}
+
+.calendar-header {
+  padding: 10px 0;
+}
+
+.calendar-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 覆盖 antd 日历样式 */
+.calendar-wrapper .ant-picker-calendar {
+  background: transparent;
+}
+
+.calendar-wrapper .ant-picker-panel {
+  background: transparent;
+  border: none;
+}
+
+.calendar-wrapper .ant-picker-cell-selected .ant-picker-cell-inner {
+  background-color: transparent !important;
+  border: 1px solid #333 !important;
+  color: #333 !important;
+}
+
+.calendar-wrapper .ant-picker-cell-today .ant-picker-cell-inner::before {
+  border-color: #f5a623 !important;
+}
+
+/* 周末标红 */
+.calendar-wrapper .ant-picker-content th:nth-child(6),
+.calendar-wrapper .ant-picker-content th:nth-child(7) {
+  color: #f5a623;
+}
+
+.calendar-wrapper .ant-picker-cell:nth-child(6) .ant-picker-cell-inner,
+.calendar-wrapper .ant-picker-cell:nth-child(7) .ant-picker-cell-inner {
+  color: #f5a623;
+}
+
+/* 底部大卡片 */
+.bottom-card {
+  flex: 1;
+  min-height: 200px;
+}
+
+/* 日历单元格任务标记 */
+.calendar-cell-tasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 2px;
+}
+
+.task-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.task-count {
+  font-size: 10px;
+  color: #666;
+}
+
+/* 空计划状态 */
+.empty-plans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #999;
+}
+
+.empty-plans span {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.empty-plans p {
+  margin: 0;
+  font-size: 15px;
+  color: #666;
+}
+
+.empty-plans .empty-tip {
+  font-size: 13px;
+  color: #999;
+  margin-top: 8px;
+}
+
+/* 任务弹窗样式 */
+.task-modal .ant-modal-content {
+  border-radius: 16px;
+}
+
+.task-modal .ant-modal-header {
+  border-radius: 16px 16px 0 0;
+}
+
+.modal-task-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.modal-task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+}
+
+.modal-task-item:hover {
+  background: #f0f0f0;
+}
+
+.modal-task-item.completed {
+  background: #f0fff0;
+}
+
+.modal-task-item.completed .task-title {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.modal-task-item .task-title {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+.completed-icon {
+  color: #52c41a;
+  font-size: 16px;
+}
+
+.modal-summary {
+  text-align: center;
+  padding: 15px;
+  color: #666;
+  font-size: 14px;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 10px;
+}

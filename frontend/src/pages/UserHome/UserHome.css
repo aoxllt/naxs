@@ -1,0 +1,629 @@
+.user-home-container {
+  min-height: 100vh;
+  background-color: #f0ebe5;
+}
+
+.user-home-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* 用户资料卡片 */
+.profile-section {
+  margin-bottom: 24px;
+}
+
+.profile-card {
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.profile-card .ant-card-body {
+  padding: 0;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+
+.avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar-wrapper .ant-avatar {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-upload-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+
+.avatar-upload-btn:hover {
+  transform: scale(1.1);
+  background: #f5f5f5;
+}
+
+.avatar-upload-btn .anticon {
+  color: #666;
+  font-size: 16px;
+}
+
+.profile-info {
+  flex: 1;
+  color: #fff;
+}
+
+.username {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.bio {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 12px 0;
+}
+
+.join-date {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.edit-btn {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+  height: 40px !important;
+  padding: 0 20px !important;
+  transition: all 0.3s !important;
+}
+
+.edit-btn:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* 快速统计 */
+.quick-stats {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  background: #fff;
+}
+
+.quick-stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.quick-stat-item .stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.quick-stat-item .stat-label {
+  font-size: 14px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.quick-stats .divider {
+  width: 1px;
+  background: #eee;
+}
+
+/* Tabs 区域 */
+.tabs-section {
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.tabs-section .ant-tabs-nav {
+  margin-bottom: 24px;
+}
+
+.tabs-section .ant-tabs-tab {
+  font-size: 16px;
+  padding: 12px 20px;
+}
+
+.tab-content {
+  min-height: 400px;
+}
+
+/* 数据统计部分 */
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.stats-section {
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card .ant-statistic-title {
+  font-size: 13px;
+  color: #888;
+}
+
+.stat-card .ant-statistic-content {
+  font-size: 28px;
+}
+
+.stat-card .ant-statistic-content-prefix {
+  margin-right: 8px;
+  color: #667eea;
+}
+
+.streak-card {
+  background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+}
+
+.streak-card .ant-statistic-content-prefix {
+  color: #ff4d4f;
+}
+
+/* 进度部分 */
+.progress-section {
+  margin-bottom: 32px;
+}
+
+.progress-card {
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.progress-text {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.progress-text .completed {
+  font-size: 32px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.progress-text .separator {
+  font-size: 20px;
+  color: #ccc;
+  margin: 0 4px;
+}
+
+.progress-text .total {
+  font-size: 20px;
+  color: #999;
+}
+
+.progress-text .label {
+  font-size: 14px;
+  color: #888;
+  margin-left: 8px;
+}
+
+.progress-percentage {
+  font-size: 24px;
+  font-weight: 600;
+  color: #764ba2;
+}
+
+.progress-tip {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 15px;
+  color: #666;
+}
+
+/* 成就徽章 */
+.achievements-section {
+  margin-bottom: 24px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 16px;
+}
+
+.achievement-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.achievement-item.unlocked {
+  background: linear-gradient(145deg, #fff, #f5f5f5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.achievement-item.unlocked:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-item.locked {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+.achievement-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.achievement-name {
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+}
+
+/* 设置页面 */
+.settings-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings-card {
+  border-radius: 16px;
+}
+
+.settings-card .ant-card-head {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.settings-card .ant-card-head-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-item.clickable {
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0 -24px;
+  padding: 16px 24px;
+}
+
+.setting-item.clickable:hover {
+  background: #f9f9f9;
+}
+
+.setting-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.setting-icon {
+  font-size: 20px;
+  color: #667eea;
+}
+
+.setting-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.setting-desc {
+  font-size: 13px;
+  color: #999;
+}
+
+.danger-card .ant-card-head-title {
+  color: #ff4d4f;
+}
+
+.danger-text {
+  color: #ff4d4f !important;
+}
+
+/* 编辑弹窗 */
+.edit-modal .ant-modal-content {
+  border-radius: 16px;
+}
+
+.edit-modal .ant-modal-header {
+  border-radius: 16px 16px 0 0;
+}
+
+.edit-modal .ant-form-item-label > label {
+  font-weight: 500;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .profile-info {
+    text-align: center;
+  }
+
+  .username {
+    font-size: 24px;
+  }
+
+  .edit-btn {
+    margin-top: 16px;
+  }
+
+  .quick-stat-item .stat-value {
+    font-size: 24px;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==================== 历史记录 Tab ==================== */
+.history-tab {
+  padding-bottom: 24px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.history-header .section-title {
+  margin-bottom: 0;
+}
+
+.history-header .ant-picker {
+  border-radius: 8px;
+}
+
+/* 时间线样式 */
+.history-timeline {
+  margin-top: 16px;
+}
+
+.history-timeline .ant-timeline-item {
+  padding-bottom: 24px;
+}
+
+.timeline-dot {
+  font-size: 18px;
+}
+
+/* 历史记录卡片 */
+.history-card {
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid #f0f0f0;
+}
+
+.history-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-color: #e0e0e0;
+}
+
+.history-card.expanded {
+  border-color: #667eea;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+}
+
+.history-card .ant-card-body {
+  padding: 16px 20px;
+}
+
+.history-card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.history-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: #fff;
+}
+
+.history-date .date-day {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.history-date .date-weekday {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+.history-summary {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.task-summary .anticon {
+  color: #52c41a;
+}
+
+.thought-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #999;
+  font-size: 13px;
+}
+
+.thought-preview .anticon {
+  color: #f5a623;
+}
+
+/* 展开的详细内容 */
+.history-card-detail {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #e8e8e8;
+}
+
+.detail-section {
+  margin-bottom: 20px;
+}
+
+.detail-section:last-child {
+  margin-bottom: 0;
+}
+
+.detail-section h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.history-card .task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-card .task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.history-card .task-item:hover {
+  background: #f0f0f0;
+}
+
+.history-card .task-item.completed {
+  background: #f6ffed;
+}
+
+.history-card .task-item.completed .task-title {
+  color: #52c41a;
+}
+
+.history-card .task-color {
+  width: 4px;
+  height: 24px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.history-card .task-title {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+.history-card .task-tag {
+  margin: 0;
+}
+
+.thought-content {
+  padding: 16px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border-radius: 12px;
+  color: #5a3e2b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* 空状态 */
+.history-tab .ant-empty {
+  padding: 60px 0;
+}
